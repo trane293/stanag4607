@@ -4,7 +4,7 @@ This project follows Semantic Versioning and records user-visible changes here.
 
 ## Unreleased
 
-## 0.1.0 - pending publication
+## 0.1.0 - 2026-09-17
 
 ### Added
 
