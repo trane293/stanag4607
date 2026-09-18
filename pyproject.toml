@@ -32,7 +32,7 @@ dependencies = []
 
 [project.urls]
 Homepage = "https://github.com/trane293/stanag4607"
-Documentation = "https://github.com/trane293/stanag4607/tree/main/docs"
+Documentation = "https://stanag4607.readthedocs.io/"
 Repository = "https://github.com/trane293/stanag4607"
 Issues = "https://github.com/trane293/stanag4607/issues"
 Changelog = "https://github.com/trane293/stanag4607/blob/main/CHANGELOG.md"

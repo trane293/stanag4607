@@ -71,18 +71,18 @@ with Path("tests/fixtures/mission_dwell_hi_res_targets.gmti").open("rb") as sour
 decoder.finish()
 ```
 
-The [quickstart](https://github.com/trane293/stanag4607/blob/main/docs/QUICKSTART.md)
+The [quickstart](https://stanag4607.readthedocs.io/en/latest/QUICKSTART/)
 walks through inspection, validation, GeoJSON export, and the replay demo.
 
 ## Choose a workflow
 
 | I want to… | Start here |
 | --- | --- |
-| Run the included sample | [Quickstart](https://github.com/trane293/stanag4607/blob/main/docs/QUICKSTART.md) |
-| Read a stream from Python | [Live streams and context](https://github.com/trane293/stanag4607/blob/main/docs/STREAMS.md) |
-| Export target points | [Target geometry and GeoJSON](https://github.com/trane293/stanag4607/blob/main/docs/GEOJSON.md) |
-| Understand supported fields and validation | [Conformance matrix](https://github.com/trane293/stanag4607/blob/main/docs/CONFORMANCE.md) |
-| Integrate GMTI with another sensor feed | [Architecture](https://github.com/trane293/stanag4607/blob/main/docs/ARCHITECTURE.md) |
+| Run the included sample | [Quickstart](https://stanag4607.readthedocs.io/en/latest/QUICKSTART/) |
+| Read a stream from Python | [Live streams and context](https://stanag4607.readthedocs.io/en/latest/STREAMS/) |
+| Export target points | [Target geometry and GeoJSON](https://stanag4607.readthedocs.io/en/latest/GEOJSON/) |
+| Understand supported fields and validation | [Conformance matrix](https://stanag4607.readthedocs.io/en/latest/CONFORMANCE/) |
+| Integrate GMTI with another sensor feed | [Architecture](https://stanag4607.readthedocs.io/en/latest/ARCHITECTURE/) |
 
 ## Standards support at a glance
 
@@ -92,8 +92,8 @@ walks through inspection, validation, GeoJSON export, and the replay demo.
 | **Partial or preservation-only** | Job Definition geographic validation; compressed HRR scatterers; registered extensions without published payload layouts |
 | **Future or separate work** | General historical-edition profiles; network transport adapters; production visualization; cross-sensor fusion |
 
-The [conformance matrix](https://github.com/trane293/stanag4607/blob/main/docs/CONFORMANCE.md)
-shows field-level evidence and the [limitations](https://github.com/trane293/stanag4607/blob/main/docs/LIMITATIONS.md)
+The [conformance matrix](https://stanag4607.readthedocs.io/en/latest/CONFORMANCE/)
+shows field-level evidence and the [limitations](https://stanag4607.readthedocs.io/en/latest/LIMITATIONS/)
 explain interoperability boundaries. The supported baseline is STANAG 4607
 Edition 4 / AEDP-4607 Edition A Version 1.
 
@@ -109,11 +109,11 @@ Edition 4 / AEDP-4607 Edition A Version 1.
 
 ## Documentation
 
-The documentation includes a [quickstart](https://github.com/trane293/stanag4607/blob/main/docs/QUICKSTART.md),
-[runnable examples](https://github.com/trane293/stanag4607/blob/main/docs/EXAMPLES.md),
-a [Python API reference](https://github.com/trane293/stanag4607/blob/main/docs/api/index.md),
-and detailed [standards coverage](https://github.com/trane293/stanag4607/blob/main/docs/CONFORMANCE.md).
-The public API is pre-1.0; see the [stability policy](https://github.com/trane293/stanag4607/blob/main/docs/API_STABILITY.md).
+The documentation includes a [quickstart](https://stanag4607.readthedocs.io/en/latest/QUICKSTART/),
+[runnable examples](https://stanag4607.readthedocs.io/en/latest/EXAMPLES/),
+a [Python API reference](https://stanag4607.readthedocs.io/en/latest/api/),
+and detailed [standards coverage](https://stanag4607.readthedocs.io/en/latest/CONFORMANCE/).
+The public API is pre-1.0; see the [stability policy](https://stanag4607.readthedocs.io/en/latest/API_STABILITY/).
 
 ## Contributing
 

@@ -22,13 +22,21 @@ distribution are separate release milestones.
    including the strict documentation build and tested example scripts.
 5. Inspect the wheel and source archive. Install the wheel into a new environment
    and smoke-test `stanag4607 --help` plus one attributed fixture.
-6. Create a signed tag `v<version>` only after those checks pass.
-7. Prefer PyPI trusted publishing from a protected release environment. Never put
-   a PyPI API token in Git, workflow text, command history, or a pull request.
+6. Register a PyPI pending trusted publisher before the first release, with
+   project `stanag4607`, GitHub owner `trane293`, repository `stanag4607`,
+   workflow `publish-to-pypi.yml`, and environment `pypi`. After first use, PyPI
+   converts the pending publisher to a normal trusted publisher. Confirm the
+   GitHub `pypi` environment requires `trane293` approval and accepts only `v*`
+   tags. No API token is needed or permitted in Git, workflow text, command
+   history, or a pull request.
+7. Create a signed tag `v<version>` only after those checks pass, then publish a
+   normal GitHub Release for that tag. The release workflow verifies that its
+   source commit is reachable from `main` and its tag matches the package
+   version, runs the full gates, builds both distributions, and pauses for
+   environment approval before uploading to PyPI.
 8. Verify the published metadata, wheel hash, import, CLI, and project links from
-   a fresh installation before announcing the release. After Read the Docs
-   imports the public repository, replace README links to GitHub Markdown with
-   the corresponding rendered documentation pages and verify them.
+   a fresh installation before announcing the release. Confirm the rendered
+   Read the Docs pages linked from the README and PyPI metadata are live.
 
 Version `0.1.0` establishes the first alpha API baseline. A version number below
 1.0 communicates that compatibility and conformance coverage are still evolving;
