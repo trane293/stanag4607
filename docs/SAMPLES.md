@@ -19,10 +19,11 @@ and redistribution decisions are recorded in
 
 ## Local data archive
 
-Collected source data is copied into a separate, non-Git data workspace:
+For local work, keep larger or rights-uncertain files in a separate, non-Git
+data directory alongside the repository:
 
 ```text
-/Users/anmol/Documents/Codex/stanag-samples/
+stanag-samples/
 ├── 4607/
 │   ├── bundled-fixtures/
 │   ├── samples/
@@ -33,11 +34,10 @@ Collected source data is copied into a separate, non-Git data workspace:
     └── manifest.json
 ```
 
-The repository continues to use `tests/fixtures/` for small redistributable
-automated fixtures and ignored `samples/private/` paths for local testing. The
-separate archive is the canonical collection area for larger files and files
-whose redistribution terms are uncertain. It also keeps 4607 radar data and
-4609 FMV data beside one another without coupling the two Python libraries.
+The repository uses `tests/fixtures/` for small redistributable test packets
+and ignored `samples/private/` paths for local testing. A separate archive
+keeps larger radar and FMV collections together without coupling their Python
+libraries or adding media to Git.
 
 ## Edition A Version 1 synthetic interoperability packets
 

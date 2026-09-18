@@ -173,10 +173,12 @@ mypy src
 pytest --cov=stanag4607 --cov-branch --cov-report=term-missing
 python -m build
 python -m twine check dist/*
+mkdocs build --strict
 ```
 
 The repository-wide branch-coverage floor is 90%. Protocol parsers, encoders,
 validators, and state machines should exceed that floor with focused tests.
+Install the `docs` extra before building the documentation.
 
 ## Change discipline
 

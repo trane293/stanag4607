@@ -1,0 +1,95 @@
+site_name: stanag4607
+site_description: Pure-Python STANAG 4607 GMTI toolkit
+site_url: https://stanag4607.readthedocs.io/
+repo_name: trane293/stanag4607
+repo_url: https://github.com/trane293/stanag4607
+edit_uri: edit/main/docs/
+copyright: Copyright &copy; stanag4607 contributors — MIT licensed
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.path
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths:
+            - src
+          options:
+            members_order: source
+            merge_init_into_class: true
+            show_root_heading: true
+            show_signature_annotations: true
+            show_source: false
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+nav:
+  - Home: index.md
+  - Get started:
+      - Installation: INSTALLATION.md
+      - Quickstart: QUICKSTART.md
+      - Examples: EXAMPLES.md
+      - Command line: CLI.md
+  - User guide:
+      - Packet and segment model: PACKETS.md
+      - Live streams and context: STREAMS.md
+      - Target geometry and GeoJSON: GEOJSON.md
+      - Samples and provenance: SAMPLES.md
+  - API reference:
+      - Overview: api/index.md
+      - Packets and framing: api/packets.md
+      - Streams and events: api/streams.md
+      - Segments and geometry: api/segments.md
+      - Validation and export: api/validation.md
+      - Stability policy: API_STABILITY.md
+  - Standards and assurance:
+      - Conformance: CONFORMANCE.md
+      - Known limitations: LIMITATIONS.md
+      - Production readiness: PRODUCTION_READINESS.md
+      - Requirement trace: requirements/AEDP-4607-EDA-V1.md
+      - Segment priorities: SEGMENT_PRIORITIES.md
+  - Project:
+      - Architecture and fusion boundary: ARCHITECTURE.md
+      - Roadmap: ROADMAP.md
+      - Development method: DEVELOPMENT.md
+      - Releasing: RELEASING.md
+
+validation:
+  links:
+    anchors: warn
+    unrecognized_links: warn

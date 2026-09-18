@@ -4,6 +4,8 @@ This project follows Semantic Versioning and records user-visible changes here.
 
 ## Unreleased
 
+## 0.1.0 - pending publication
+
 ### Added
 
 - Structured contextual time diagnostics for invalid Mission dates and
@@ -19,11 +21,6 @@ This project follows Semantic Versioning and records user-visible changes here.
   validation and CLI/live-demo integration.
 - Fusion-ready UTC conveniences for ordinary tasking timestamps, exact leap-second
   component preservation, and calendar-date diagnostics.
-
-## 0.1.0 - 2026-09-12
-
-### Added
-
 - Bounded complete and incremental packet framing with lossless unknown segments.
 - Typed Mission, Dwell/Target Report, Job Definition, Free Text, Test and Status,
   Processing History, and Platform Location segments.
@@ -39,6 +36,8 @@ This project follows Semantic Versioning and records user-visible changes here.
 - Explicit Mission/Job context lifecycle events for new, repeated, replaced, and
   LRU-evicted context.
 - Attributed Apache-2.0 synthetic Edition 4 interoperability fixtures.
+- Source examples, a browsable API guide, and a Read the Docs-ready documentation
+  site.
 
 ### Security
 

@@ -12,7 +12,7 @@ pyenv local 3.10.13
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
-python -m pip install -e '.[dev]'
+python -m pip install -e '.[dev,docs]'
 ```
 
 ## Branches and commits
@@ -49,6 +49,7 @@ mypy src
 pytest --cov=stanag4607 --cov-branch --cov-report=term-missing
 python -m build
 python -m twine check dist/*
+mkdocs build --strict
 ```
 
 ## Pull requests
@@ -59,4 +60,3 @@ resource/security considerations, compatibility impact, samples used and their
 provenance, documentation changes, and exact verification commands. Reviewers
 should reject untraceable conformance claims, unbounded input handling, lost raw
 values, hidden dependencies, and cross-sensor fusion policy.
-

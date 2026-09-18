@@ -2,47 +2,34 @@
 
 ## Current state
 
-This repository now implements bounded, lossless structural decoding and
-encoding of complete packets, the fixed 32-byte packet header, and 5-byte
-segment headers. A fail-closed, bounded incremental decoder handles arbitrary
-stream chunks and terminal truncation. Mission Segments are typed and preserve
-the reference date needed by later time-bearing reports. Exact BA16/BA32 and
-SA16/SA32 values preserve raw coordinate bits and expose rational degrees. The
-complete Dwell and Target Report structures are decoded losslessly with typed,
-unit-explicit accessors for every field, including exact target coordinates for
-both direct and reduced-bandwidth representations. Structured, non-destructive
-Dwell validation covers the principal field-presence groups and classification
-probability. Job Definition J1-J28 supplies exact task, radar-mode,
-bounding-area, earth-model, and nominal-uncertainty context. Free Text, Test and
-Status, Processing History, and Platform Location cover the practical optional
-application segments. HRR fixed metadata H1-H31 and uncompressed H32 scatterer
-records are typed and validated, with independent per-job continuity state;
-threshold-decomposition remains bounded, lossless, and opaque. Reserved and
-unsupported payloads remain opaque. Recommended Chapter 4 Job Request and Job
-Acknowledge messages are typed and validated without embedding scheduling or
-authorization policy. Typed segment events retain
-their exact packet header, segment
-index, and wire segment for downstream adapters. A bounded contextual stream
-decoder carries Mission/Job state across arbitrary chunks and resolves exact
-millisecond Dwell, Test and Status, and Platform Location timestamps to UTC when a
-valid Mission date is known. Complete
-target positions export to dependency-free GeoJSON with raw-coordinate
-provenance for sample visualization. Mission/Job context lifecycle changes and
-deterministic LRU evictions are observable by downstream adapters. A lightweight
-localhost replay UI demonstrates live validation and located targets using the
-same public APIs; it is not a production visualization or fusion layer. The current
-official baseline, STANAG 4607 Edition 4 with AEDP-4607 Edition A Version 1 and its
-AEDP-4607.1 implementation guide, has been acquired from NATO's public database
-and stored in the local Git-ignored standards archive.
+The Edition A Version 1 profile includes:
+
+- bounded, lossless packet framing and incremental decoding across arbitrary
+  chunks, with explicit truncation and fail-closed behavior;
+- typed Mission, Dwell and Target Report, Job Definition, Free Text, Test and
+  Status, Processing History, Platform Location, and recommended tasking
+  segments;
+- typed HRR fixed metadata and uncompressed scatterers, with compressed
+  threshold-decomposition retained as opaque bytes;
+- exact binary-angle and decimal values, contextual UTC time, bounded
+  Mission/Job state, and conservative Dwell/HRR continuity diagnostics; and
+- structured validation, GeoJSON target export, CLI commands, and a local
+  replay view.
+
+Typed events retain the original packet header, wire segment, and segment
+index for downstream adapters. The official STANAG 4607 Edition 4,
+AEDP-4607 Edition A Version 1, and AEDP-4607.1 texts are recorded in
+`references/standards/manifest.json` and kept in a Git-ignored local archive.
+The [conformance matrix](CONFORMANCE.md) gives field-level evidence and the
+[limitations](LIMITATIONS.md) define the current interoperability boundary.
 
 Every increment follows the goal-seeking TDD cycle in
 `docs/DEVELOPMENT.md`: select one practical evidence-backed outcome, observe a
 failing test, implement the minimum correct behavior, run complete gates, record
 a clean commit, and reassess the next goal from the resulting state.
 
-The current go/no-go assessment and operational evidence gaps are maintained in
-`docs/PRODUCTION_READINESS.md`. Further protocol expansion is evidence-led and
-does not block publishing the documented, limited open-source profile.
+The [production-readiness assessment](PRODUCTION_READINESS.md) separates
+library quality from the partner-specific evidence needed for field deployment.
 
 Parallax FR-001 is resolved by structured contextual time diagnostics: invalid
 Mission dates and overflowing Mission-relative arithmetic no longer escape from
@@ -74,10 +61,10 @@ contract in `docs/ARCHITECTURE.md` to each protocol increment.
    and a current Edition A Version 1 operational or official corpus. Retain the
    current synthetic, AFRL exercise, and unauthenticated capture corpora as
    non-normative interoperability evidence.
-4. Before a public package release, run the API, clean-wheel-install,
-   documentation, security, and fixture-license audit in `docs/RELEASING.md`.
-   A public source snapshot is separate from PyPI publication and from claims
-   of operational deployment readiness.
+4. Before the first PyPI release, complete the API, clean-wheel-install,
+   documentation, security, and fixture-license audit in
+   [Releasing](RELEASING.md). Keep field-deployment claims tied to the separate
+   [production-readiness evidence](PRODUCTION_READINESS.md).
 
 ## Questions to resolve with the project owner or first design partner
 

@@ -41,6 +41,11 @@ Changelog = "https://github.com/trane293/stanag4607/blob/main/CHANGELOG.md"
 stanag4607 = "stanag4607.cli:entrypoint"
 
 [project.optional-dependencies]
+docs = [
+  "mkdocs>=1.6,<2",
+  "mkdocs-material>=9.7,<10",
+  "mkdocstrings[python]>=1.0,<2",
+]
 test = [
   "hypothesis>=6.0",
   "pytest>=8.3",
@@ -60,6 +65,7 @@ packages = ["src/stanag4607"]
 [tool.hatch.build.targets.sdist]
 include = [
   "/docs",
+  "/examples",
   "/references/data/manifest.json",
   "/references/standards/manifest.json",
   "/src",
@@ -69,6 +75,8 @@ include = [
   "/CONTRIBUTING.md",
   "/LICENSE",
   "/LICENSES/Apache-2.0.txt",
+  "/.readthedocs.yaml",
+  "/mkdocs.yml",
   "/README.md",
   "/SECURITY.md",
   "/THIRD_PARTY_NOTICES.md",

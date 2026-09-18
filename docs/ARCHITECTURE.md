@@ -2,11 +2,11 @@
 
 ## Decision
 
-`stanag4607` is an independent open-source protocol library. It will accurately
-decode, validate, preserve, encode, and stream contemporary STANAG 4607 GMTI
-data. It must expose enough standard-defined fidelity for downstream correlation
-with STANAG 4609 FMV and future sensor libraries, but it does not perform
-cross-sensor fusion.
+`stanag4607` is an independent open-source protocol library. It decodes,
+validates, preserves, encodes, and streams contemporary STANAG 4607 GMTI data.
+Its public API retains the standard-defined time, geometry, uncertainty,
+identity, and provenance needed by applications that work with STANAG 4609 FMV
+and other sensor feeds.
 
 The governing rule is:
 
@@ -121,4 +121,3 @@ semantically identical primitives are demonstrated. At that point, extract only
 stable mechanics that do not reveal or constrain fusion policy. Until then,
 duplication of a few small exact-value primitives is safer than premature
 cross-standard coupling.
-
