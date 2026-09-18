@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.coverage
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.venv/
+build/
+dist/
+site/
+work/
+
+# Standards and representative datasets are local unless redistribution is
+# explicitly documented.
+references/standards/*
+!references/standards/manifest.json
+samples/private/
+

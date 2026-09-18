@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "source_catalog": "https://nso.nato.int/nso/nsdd/main/standards",
+  "standards": [
+    {
+      "id": "STANAG-4607-ED4",
+      "title": "NATO Ground Moving Target Indicator (GMTI) Format",
+      "edition": "4",
+      "publication_date": "2024-02-16",
+      "role": "covering agreement",
+      "filename": "4607EFed04.pdf",
+      "pages": 6,
+      "bytes": 558866,
+      "sha256": "e102f47c51e74d26f61f02947df1228330e0ab6176b4b55c28447cf74574751b",
+      "acquired_on": "2026-09-12",
+      "acquisition": "Downloaded from the public NATO Standardization Document Database",
+      "repository_policy": "local-only; ignored by Git",
+      "notice": "NATO non-classified. The document permits reproduction with NATO acknowledgement; consult the document notice before redistribution."
+    },
+    {
+      "id": "AEDP-4607-EDA-V1",
+      "title": "NATO Ground Moving Target Indicator (GMTI) Format",
+      "edition": "A",
+      "version": "1",
+      "publication_date": "2024-02",
+      "role": "normative technical standard",
+      "filename": "AEDP-4607 EDA V1 E.pdf",
+      "pages": 104,
+      "bytes": 1724707,
+      "sha256": "13f054c2bced1444aac9b5e85682b0b14b82f1d83988bf183f9324095c11a5d9",
+      "acquired_on": "2026-09-12",
+      "acquisition": "Downloaded from the public NATO Standardization Document Database",
+      "repository_policy": "local-only; ignored by Git",
+      "notice": "NATO non-classified. The document permits reproduction with NATO acknowledgement; consult the document notice before redistribution."
+    },
+    {
+      "id": "AEDP-4607.1-EDA-V1",
+      "title": "NATO Ground Moving Target Indicator (GMTI) Format Implementation Guide",
+      "edition": "A",
+      "version": "1",
+      "publication_date": "2024-02",
+      "role": "implementation guide",
+      "filename": "AEDP-4607.1 EDA V1 E.pdf",
+      "pages": 212,
+      "bytes": 3010604,
+      "sha256": "877f9b6f1bbcd1ac76cddca751a7222deb5bcf8c8061e6530657eb68f655ed94",
+      "acquired_on": "2026-09-12",
+      "acquisition": "Downloaded from the public NATO Standardization Document Database",
+      "repository_policy": "local-only; ignored by Git",
+      "notice": "NATO non-classified. The document permits reproduction with NATO acknowledgement; consult the document notice before redistribution."
+    }
+  ]
+}
